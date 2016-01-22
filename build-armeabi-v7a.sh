@@ -3,14 +3,13 @@ NDK=/Users/arlen/Library/Android/sdk/ndk-bundle
 SYSROOT=$NDK/platforms/android-21/arch-arm
 TOOLCHAIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64
 
-CPU=armeabi-v7a
-PREFIX=./android/$CPU
 ADDI_CFLAGS="-marm"
 
 function build_one
 {
 	./configure \
-	--prefix=$PREFIX \
+	--prefix=re \
+	--prefix=./android/armeabi-v7a \
 	--enable-shared \
 	--disable-static \
 	--disable-doc \

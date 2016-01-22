@@ -3,13 +3,10 @@ NDK=/Users/arlen/Library/Android/sdk/ndk-bundle
 SYSROOT=$NDK/platforms/android-21/arch-arm64
 TOOLCHAIN=$NDK/toolchains/x86-4.9/prebuilt/darwin-x86_64
 
-CPU=x86
-PREFIX=./android/$CPU
-
 function build_one
 {
   ./configure \
-  --prefix=$PREFIX \
+  --prefix=./android/x86 \
   --enable-shared \
   --disable-static \
   --disable-doc \
